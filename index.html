@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+<body>
+    <script src="script.js"></script>
+    <div class="main">
+        <div class="flex">
+            <div id="screen">
+                <div id="screen_inner"></div>
+            </div>
+        </div>
+        <div class="flex">
+            <button class="button num" onclick="place('7')">7</button>
+            <button class="button num" onclick="place('8')">8</button>
+            <button class="button num" onclick="place('9')">9</button>
+            <button class="button oth" onclick="equasion('/')">/</button>
+        </div>
+        
+        <div class="flex">
+            <button class="button num" onclick="place('4')">4</button>
+            <button class="button num" onclick="place('5')">5</button>
+            <button class="button num" onclick="place('6')">6</button>
+            <button class="button oth" onclick="equasion('*')">x</button>
+        </div>
+        
+        <div class="flex">
+            <button class="button num" onclick="place('1')">1</button>
+            <button class="button num" onclick="place('2')">2</button>
+            <button class="button num" onclick="place('3')">3</button>
+            <button class="button oth" onclick="equasion('-')">-</button>
+        </div>
+        
+        <div class="flex">
+            <button class="button oth" onclick="equasion('sqrt')">√</button>
+            <button class="button num" onclick="place('0')">0</button>
+            <button class="button oth" onclick="equal_to()">=</button>
+            <button class="button oth" onclick="equasion('+')">+</button>
+        </div>
+    </div>
+</body>
+</html>
