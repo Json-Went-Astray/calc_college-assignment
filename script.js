@@ -41,8 +41,24 @@ function place(arg1) {
   x.innerHTML = st_num;   
 }
 
+function factorial(arg1) {
+    var result = 1;
+    for (let i = 2; i <= arg1; i++) {
+        result *= i;
+    }
+    return result;
+}
+
 function equasion(arg1) {
     convert(1);
+    if (arg1 == "fac") {
+        document.getElementById("screen_inner").innerHTML = factorial(st_int);
+        st_int = 0;
+        sec_int = 0;
+        symbol = "none";
+        return;
+    }
+
     if (arg1 == "sqrt" && st_int >= 0) {
         document.getElementById("screen_inner").innerHTML = Math.sqrt(st_int);
         st_num = Math.sqrt(st_int).toString()
