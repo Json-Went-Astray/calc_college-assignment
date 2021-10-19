@@ -1,6 +1,7 @@
 var st_num ="";
 var st_int = 0;
 var sec_int = 0;
+var previous = 0;
 var symbol = "none";
 
 function convert(arg1) {
@@ -26,6 +27,13 @@ function place(arg1) {
     st_num = arg1;
     document.getElementById("screen_inner").innerHTML = st_num;
     return;
+  }
+  else if (previous) {
+    let x = document.getElementById("screen_inner");
+    st_num = arg1;
+    x.innerHTML = st_num;
+    previous = 0;
+    return;   
   }
   
   let x = document.getElementById("screen_inner");
@@ -63,6 +71,7 @@ function equal_to() {
             st_int = 0;
             sec_int = 0;
             symbol = "none";
+            previous = 1;
             return;
         case '-':
             convert(0);
@@ -71,6 +80,7 @@ function equal_to() {
             st_int = 0;
             sec_int = 0;
             symbol = "none";
+            previous = 1;
             return;
         case '*':
             convert(0);
@@ -79,6 +89,7 @@ function equal_to() {
             st_int = 0;
             sec_int = 0;
             symbol = "none";
+            previous = 1;
             return;
         case '/':
             convert(0);
@@ -87,6 +98,7 @@ function equal_to() {
                 st_int = 0;
                 sec_int = 0;
                 symbol = "none";
+                previous = 0;
                 return;
             }
             document.getElementById("screen_inner").innerHTML = (st_int / sec_int);
@@ -94,6 +106,7 @@ function equal_to() {
             st_int = 0;
             sec_int = 0;
             symbol = "none";
+            previous = 1;
             return;
         default:
             return;
